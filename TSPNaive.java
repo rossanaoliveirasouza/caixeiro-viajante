@@ -8,10 +8,6 @@ public class TSPNaive {
     static int[][] matriz;
     static int melhorRota = Integer.MAX_VALUE;
 
-    /*
-     * Lê matriz de adjascencia de um arquivo.txt
-     * 
-     */
     static int[][] leMatrizAdjascencia() {
         int[][] matriz = new int[0][0];
         try {
@@ -49,7 +45,7 @@ public class TSPNaive {
             int soma = matriz[verticeInicial][p[j]];
 
             for (int i = 1; i < p.length; i++, j++)
-                soma += matriz[p[j]][p[i]]; // soma de cada possibilidade
+                soma += matriz[p[j]][p[i]];
 
             soma += matriz[p[j]][verticeInicial];
             if (soma < melhorRota)
